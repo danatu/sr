@@ -1,0 +1,22 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Popover title="{Name}" class="sapUiContentPadding" placement="Bottom" initialFocus="email">
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button id="logout" text="Log Out" press="onLogOut"/>
+			</Toolbar>
+		</footer>
+	<content>
+	    <SelectList itemPress="onSelectLoginAction" selectedKey="item1" selectedItemId="__item0" id="list_login">
+	        <items>
+	            <core:ListItem text="My Workspace" key="action_workSpace" id="item_workspace"/>
+	            <!--<core:ListItem text="List Item 2" key="item2" id="item_a1"/>-->
+	            <!--<core:ListItem text="List Item 3" key="item3" id="item_a2"/>-->
+	        </items>
+	    </SelectList>
+	</content>
+	<subHeader>
+	    <Text class="popLoginTxt" text="{appView>/user/FIRSTNAME} {appView>/user/LASTNAME}" id="text_user"/>
+	</subHeader>
+	</Popover>
+</core:FragmentDefinition>

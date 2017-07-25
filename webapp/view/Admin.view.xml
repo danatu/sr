@@ -1,0 +1,345 @@
+<mvc:View xmlns:tnt="sap.tnt" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	controllerName="sr.controller.Admin">
+	<App>
+		<pages>
+			<Page class="pageAdmin" title="{i18n>admin}">
+				<content>
+					<tnt:ToolPage id="toolPage">
+						<!--<tnt:header>-->
+						<!--<tnt:ToolHeader>-->
+						<!--	<Text class="txtHeader" textAlign="Center" id="text_header" text="Users"/>-->
+						<!--<ToolbarSpacer width="20px"/>-->
+						<!--<Button text="File" type="Transparent">-->
+						<!--	<layoutData>-->
+						<!--		<OverflowToolbarLayoutData priority="Low"/>-->
+						<!--	</layoutData>-->
+						<!--</Button>-->
+						<!--<Button text="Edit" type="Transparent">-->
+						<!--	<layoutData>-->
+						<!--		<OverflowToolbarLayoutData priority="Low"/>-->
+						<!--	</layoutData>-->
+						<!--</Button>-->
+						<!--<Button text="View" type="Transparent">-->
+						<!--	<layoutData>-->
+						<!--		<OverflowToolbarLayoutData priority="Low"/>-->
+						<!--	</layoutData>-->
+						<!--</Button>-->
+						<!--<Button text="Navigate" type="Transparent">-->
+						<!--	<layoutData>-->
+						<!--		<OverflowToolbarLayoutData priority="Low"/>-->
+						<!--	</layoutData>-->
+						<!--</Button>-->
+						<!--<Button text="Code" type="Transparent">-->
+						<!--	<layoutData>-->
+						<!--		<OverflowToolbarLayoutData priority="Low"/>-->
+						<!--	</layoutData>-->
+						<!--</Button>-->
+						<!--<Button text="Refactor" type="Transparent">-->
+						<!--	<layoutData>-->
+						<!--		<OverflowToolbarLayoutData priority="Low"/>-->
+						<!--	</layoutData>-->
+						<!--</Button>-->
+						<!--<Button text="Run" type="Transparent">-->
+						<!--	<layoutData>-->
+						<!--		<OverflowToolbarLayoutData priority="Low"/>-->
+						<!--	</layoutData>-->
+						<!--</Button>-->
+						<!--<Button text="Tools" type="Transparent">-->
+						<!--	<layoutData>-->
+						<!--		<OverflowToolbarLayoutData priority="Low"/>-->
+						<!--	</layoutData>-->
+						<!--</Button>-->
+						<!--<tnt:ToolHeaderUtilitySeparator/>-->
+						<!--<ToolbarSpacer>-->
+						<!--	<layoutData>-->
+						<!--		<OverflowToolbarLayoutData priority="NeverOverflow" minWidth="20px"/>-->
+						<!--	</layoutData>-->
+						<!--</ToolbarSpacer>-->
+						<!--<Button text="Alan Smith" type="Transparent" press="handleUserNamePress">-->
+						<!--	<layoutData>-->
+						<!--		<OverflowToolbarLayoutData priority="NeverOverflow"/>-->
+						<!--	</layoutData>-->
+						<!--</Button>-->
+						<!--	</tnt:ToolHeader>-->
+						<!--</tnt:header>-->
+						<tnt:sideContent>
+							<tnt:SideNavigation class="adminSideNav" expanded="true" itemSelect="onItemSelect" id="sideNav_id">
+								<tnt:NavigationList items="{path: '/navigation'}">
+									<tnt:NavigationListItem text="{title}" icon="{icon}" enabled="{enabled}" expanded="{expanded}" items="{items}" key="{key}">
+										<tnt:NavigationListItem text="{title}" key="{key}" enabled="{enabled}"/>
+									</tnt:NavigationListItem>
+								</tnt:NavigationList>
+								<!--<tnt:fixedItem>-->
+								<!--	<tnt:NavigationList items="{path: '/fixedNavigation'}">-->
+								<!--		<tnt:NavigationListItem text="{title}" icon="{icon}">-->
+								<!--		</tnt:NavigationListItem>-->
+								<!--	</tnt:NavigationList>-->
+								<!--</tnt:fixedItem>-->
+							</tnt:SideNavigation>
+						</tnt:sideContent>
+						<tnt:mainContents>
+							<NavContainer id="pageContainer">
+								<pages>
+									<ScrollContainer id="root1" horizontal="false" vertical="true" height="100%">
+										<Toolbar class="AdminHeaderToolbar" width="100%" id="toolbar_users">
+											<content>
+												<Text textAlign="Center" class="txt adminTxt" text="{i18n>users}" id="txt_header"/>
+											</content>
+										</Toolbar>
+										<Panel class="marginAdmin" id="__panel0">
+											<content>
+												<Table xmlns:tnt="sap.tnt" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" class="tblAdmin"
+													noDataText="Drop column list items here and columns in the area above" id="__table0" mode="SingleSelectMaster" itemPress="onUserPress">
+													<items>
+														<ColumnListItem type="Active" id="__item3" press="onUserPress">
+															<cells>
+																<Text text="danaturjeman@iprosis.com" id="__text0"/>
+																<Text text="active" id="__text1"/>
+																<core:Icon src="sap-icon://sys-enter" size="2em" id="__icong"/>
+																<core:Icon src="sap-icon://sys-enter" size="2em" id="__iconsr"/>
+																<core:Icon src="sap-icon://sys-enter" size="2em" id="__iconqqc"/>
+																<Text text="2017-04-03 07:37" id="__text5"/>
+																<Text text="2017-05-21 07:37" id="__text6"/>
+																<Text text="140" id="__text8"/>
+															</cells>
+														</ColumnListItem>
+														<ColumnListItem type="Active" id="__item4">
+															<cells>
+																<Text text="sharon.yacobi@iprosis.com" id="__text001"/>
+																<Text text="active" id="__text002"/>
+																<core:Icon src="sap-icon://sys-enter" size="2em" id="__icon003"/>
+																<core:Icon src="sap-icon://sys-enter" size="2em" id="__icons004"/>
+																<core:Icon src="sap-icon://sys-enter" size="2em" id="__icon005"/>
+																<Text text="2017-03-28 06:19" id="__text006"/>
+																<Text text="3" id="__text007"/>
+																<Text text="2017-05-16 17:30" id="__text9"/>
+															</cells>
+														</ColumnListItem>
+													</items>
+													<columns>
+														<Column id="__column0_us">
+															<header>
+																<Label text="{i18n>userName}" id="__label0_us"/>
+															</header>
+														</Column>
+														<Column id="__column1_us">
+															<header>
+																<Label text="{i18n>user_status}" id="__label1_us"/>
+															</header>
+														</Column>
+														<Column id="__column2_us">
+															<header>
+																<Label text="{i18n>group_permission}" id="__label2_us"/>
+															</header>
+														</Column>
+														<Column id="__column3_us">
+															<header>
+																<Label text="{i18n>srFinStatus}" id="__label3_us"/>
+															</header>
+														</Column>
+														<Column id="__column4_us">
+															<header>
+																<Label text="{i18n>qqcalc_status}" id="__label4_us"/>
+															</header>
+														</Column>
+														<Column id="__column5_us">
+															<header>
+																<Label text="{i18n>origin}" id="__label5_us"/>
+															</header>
+														</Column>
+														<Column id="__column6_us">
+															<header>
+																<Label text="{i18n>last_access}" id="__label6_us"/>
+															</header>
+														</Column>
+														<Column id="__column7_us">
+															<header>
+																<Label text="{i18n>access_count}" id="__label7_us"/>
+															</header>
+														</Column>
+													</columns>
+													<headerToolbar>
+														<Toolbar width="100%" id="__toolbar1">
+															<content>
+																<Button class="btnAdmin" text="{i18n>sort}" width="100px" id="__button_sort" icon="sap-icon://sort" />
+																<Button class="btnAdmin" text="{i18n>filter}" width="100px" id="__button9_filter" icon="sap-icon://filter"/>
+																<Button class="btnAdmin" text="{i18n>emails}" width="100px" id="__button9_emails" icon="sap-icon://email"/>
+																<ToolbarSpacer xmlns:tnt="sap.tnt" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" id="__spacer2"/>
+																<Button class="btnAdmin" text="{i18n>actions}" width="100px" id="btn_UserActions" press="onHandleOpen"/>
+															</content>
+														</Toolbar>
+													</headerToolbar>
+													<swipeContent>
+														<Bar id="__bar0"/>
+													</swipeContent>
+												</Table>
+												<Button text="{i18n>add_new_user}" width="150px" id="__button9" icon="sap-icon://add"/>
+											</content>
+										</Panel>
+										<content/>
+									</ScrollContainer>
+									<ScrollContainer id="root2" horizontal="false" vertical="true" height="100%">
+										<Toolbar class="AdminHeaderToolbar" width="100%" id="toolbar_db">
+															<content>
+																<Text textAlign="Center" class="txt adminTxt" text="{i18n>database}" id="txt_header_db"/>
+															</content>
+										</Toolbar>
+										<Panel class="marginAdmin" id="__panel_db">
+											<content>
+												<Table class="tblAdmin" xmlns:tnt="sap.tnt" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+													noDataText="Drop column list items here and columns in the area above" id="__table_db">
+													<items>
+														<ColumnListItem id="__item3_db">
+															<cells>
+																<Text text="danaturjeman@iprosis.com" id="__text6_db"/>
+																<Text text="mfr" id="__text7_db"/>
+																<Text text="DOR-ALON ENERGY IN ISRAEL (1988) LTD" id="__text8_db"/>
+																<Text text="2016-04-01 - 2016-06-30" id="__text12_db"/>
+																<Text text="2017-05-15 05:53" id="__text13_db"/>
+																<Text text="1" id="__text14_db"/>
+															</cells>
+														</ColumnListItem>
+													</items>
+													<columns>
+														<Column id="__column0_db">
+															<header>
+																<Label text="{i18n>username}" id="__label0_db"/>
+															</header>
+														</Column>
+														<Column id="__column1_db">
+															<header>
+																<Label text="{i18n>type}" id="__label1_db"/>
+															</header>
+														</Column>
+														<Column id="__column2_db">
+															<header>
+																<Label text="{i18n>company_name}" id="__label2_db"/>
+															</header>
+														</Column>
+														<Column id="__column3_db">
+															<header>
+																<Label text="{i18n>statement_date}" id="__label3_db"/>
+															</header>
+														</Column>
+														<Column id="__column4_db">
+															<header>
+																<Label text="{i18n>last_date}" id="__label4_db"/>
+															</header>
+														</Column>
+														<Column id="__column5_db">
+															<header>
+																<Label text="{i18n>qqclac_used}" id="__label5_db"/>
+															</header>
+														</Column>
+													</columns>
+													<headerToolbar>
+														<Toolbar width="100%" id="__toolbar1_db">
+															<content>
+																<Button class="btnAdmin" text="{i18n>sort}" width="100px" id="__button_sort_db" icon="sap-icon://sort"/>
+																<Button class="btnAdmin" text="{i18n>qqclac_used}" width="100px" id="__button9_filter_db" icon="sap-icon://filter"/>
+																<ToolbarSpacer xmlns:tnt="sap.tnt" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+																	id="__spacer2_db"/>
+																<Button class="btnAdmin" text="{i18n>actions}" width="100px" id="btn_DBActions" press="onHandleOpen"/>
+															</content>
+														</Toolbar>
+													</headerToolbar>
+													<swipeContent>
+														<Bar id="__bar0_db"/>
+													</swipeContent>
+												</Table>
+											</content>
+										</Panel>
+									</ScrollContainer>
+						
+									<ScrollContainer id="viewUser" horizontal="false" vertical="true" height="100%">
+										<Toolbar class="AdminHeaderToolbar" width="100%" id="toolbar_viewUser">
+															<content>
+																<Text textAlign="Center" class="txt adminTxt" text="{i18n>view_user}" id="txt_header_user_overview"/>
+															</content>
+										</Toolbar>
+										<ObjectHeader id="us_id" busy="false" busyIndicatorDelay="1000" visible="true" title="{i18n>user_name}" icon="sap-icon://person-placeholder"
+											iconActive=""/>
+										<Toolbar class="tlbrAdmin">
+											<ObjectAttribute title="{i18n>user_name}" text="danaturjeman@iprosis.com"/>
+											<ToolbarSpacer/>
+											<Button text="{i18n>edit}"/>
+										</Toolbar>
+										<Toolbar class="tlbrAdmin">
+											<ObjectAttribute title="{i18n>password}" text="Password last change over a month ago"/>
+											<ToolbarSpacer/>
+											<Button text="Edit"/>
+										</Toolbar>
+										<Toolbar class="tlbrAdmin">
+											<ObjectAttribute title="{i18n>sr_fin_toggle}"/>
+											<ToolbarSpacer/>
+											<Switch state="true"/>
+										</Toolbar>
+										<Toolbar class="tlbrAdmin">
+											<ObjectAttribute title="{i18n>group_privilege}"/>
+											<ToolbarSpacer/>
+											<Switch state="true"/>
+										</Toolbar>
+										<Toolbar class="tlbrAdmin">
+											<ObjectAttribute title="{i18n>qqcalc_toggle}"/>
+											<ToolbarSpacer/>
+											<Switch state="true"/>
+										</Toolbar>
+										<Toolbar class="tlbrAdmin">
+											<ObjectAttribute title="{i18n>num_of_records}" text="30 of 150"/>
+											<ToolbarSpacer/>
+											<Switch state="true"/>
+										</Toolbar>
+									</ScrollContainer>
+									<ScrollContainer id="viewLicense" horizontal="false" vertical="true" height="100%">
+											<Toolbar class="AdminHeaderToolbar" width="100%" id="toolbar_viewLicense">
+															<content>
+																<Text textAlign="Center" class="txt" text="{i18n>view_license}" id="txt_header_license_overview"/>
+															</content>
+											</Toolbar>
+										<ObjectHeader id="license_id" busy="false" busyIndicatorDelay="1000" visible="true" title="iProsis License details"
+											icon="sap-icon://person-placeholder" iconActive=""/>
+										<Toolbar class="tlbrAdmin">
+											<ObjectAttribute title="License type" text="Deluxe"/>
+											<ToolbarSpacer/>
+											<Button text="{i18n>upgrade}"/>
+										</Toolbar>
+										<Toolbar class="tlbrAdmin">
+											<ObjectAttribute title="{i18n>valid_from}" text="01/04/2017"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+										<Toolbar class="tlbrAdmin">
+											<ObjectAttribute title="{i18n>valid_to}" text="01/07/2018"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+										<Toolbar class="tlbrAdmin">
+											<ObjectAttribute title="{i18n>number_of_users}" text="2 of 50"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+										<Toolbar class="tlbrAdmin">
+											<ObjectAttribute title="{i18n>number_of_records}" text="30 of 150"/>
+											<ToolbarSpacer/>
+										</Toolbar>
+									</ScrollContainer>
+								</pages>
+							</NavContainer>
+						</tnt:mainContents>
+					</tnt:ToolPage>
+				</content>
+				<customHeader>
+					<Bar class="adminBar">
+						<contentRight>
+							<Button class="btnMenu" text="{i18n>home}" width="100px" id="__button3" press="onHome" icon="sap-icon://home"/>
+						</contentRight>
+						<contentLeft>
+							<Button class="btnMenu" id="sideNavigationToggleButton" icon="sap-icon://menu2" type="Transparent" press="onSideNavButtonPress">
+								<layoutData>
+									<OverflowToolbarLayoutData priority="NeverOverflow"/>
+								</layoutData>
+							</Button>
+						</contentLeft>
+					</Bar>
+				</customHeader>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

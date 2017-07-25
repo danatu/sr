@@ -1,0 +1,26 @@
+<core:FragmentDefinition xmlns:u="sap.ui.unified" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<Dialog id="createDialog" title="{i18n>create_record}">
+		<content>
+				<Page class="noHdr" id="create_p1" title="">
+					<content>
+						<VBox class="boxMaster" direction="Column" width="100%" id="__boxcreate">
+							<items>
+								<Label text="Choose Industry" width="100%" id="label_industry_create"/>
+								<ComboBox value="List Item 1" selectedKey="1" selectedItemId="item_nonbank" id="cb_create_industry">
+									<items>
+										<core:ListItem text="Non Banking" key="1" id="item_nonbank"/>
+									</items>
+								</ComboBox>
+								</items>
+						</VBox>
+					</content>
+				</Page>
+		</content>
+		<beginButton>
+			<Button text="OK" icon="sap-icon://accept" press="onDialogCreateOk"/>
+		</beginButton>
+		<endButton>
+			<Button id="btn_cancle_create" text="{i18n>cancel}" icon="sap-icon://sys-cancel" press="onDialogCreateCancle"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

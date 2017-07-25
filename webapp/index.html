@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Self Rating</title>
+<script src="Resources/externalJs/jsreport.js"></script>
+<script src="Resources/externalJs/jspdf.debug.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.0.16/jspdf.plugin.autotable.js"></script>
+<script src="Resources/externalJs/html2canvas.js"></script>
+<script src="Resources/externalJs/split_text_to_size.js"></script>
+<script src="Resources/externalJs/standard_fonts_metrics.js"></script>
+<script src="Resources/externalJs/from_html.js"></script>
+<script src="Resources/externalJs/jspdf.plugin.text-align.js"></script>
+<script src="Resources/externalJS/FileSaver.js"></script>
+<script src="Resources/externalJS/FileSaver.min.js"></script>
+
+	<!-- Bootstrapping UI5 -->
+	<script id="sap-ui-bootstrap"
+			src="resources/sap-ui-core.js"
+			data-sap-ui-appCacheBuster="./"
+			data-sap-ui-libs="sap.ui.commons,sap.m"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{"sr": "."}'
+			data-sap-ui-frameOptions="trusted">
+	</script>
+	<script>
+		sap.ui.getCore().attachInit(function () {
+			sap.ui.require([
+				"sap/m/Shell",
+				"sap/ui/core/ComponentContainer"
+			], function (Shell, ComponentContainer) {
+			// app: new ComponentContainer({
+			// 			height : "100%",
+			// 			name : "sr"
+			// 		}).placeAt("content");
+			
+		//		initialize the UI component
+				new Shell({
+					showLogout:true,
+					backgroundColor : "white",
+					app: new ComponentContainer({
+						height : "100%",
+						name : "sr"
+					})
+				}).placeAt("content");
+			});
+		});
+	</script>
+</head>
+
+<!-- UI Content -->
+<body class="sapUiBody" id="content">
+</body>
+</html>

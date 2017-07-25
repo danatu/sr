@@ -1,0 +1,40 @@
+<core:FragmentDefinition xmlns:u="sap.ui.unified" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<Dialog id="resultDialog" title="{i18n>indicative_rating_report}" draggable="true" >
+		<content>
+			<Panel class="pnlTotalResult">
+				<content>
+					<ObjectAttribute id="total_rating_result" title="{i18n>overall_rating}" text=""/>
+				</content> 
+			</Panel> 
+			<Table noDataText="Drop column list items here and columns in the area above" id="table_indresult">
+				<columns>
+					<Column id="__column0test">
+						<header>
+							<Label text="{i18n>fianance_ratios}" id="__label0test"/>
+						</header>
+					</Column>
+					<Column id="__column1test">
+						<header>
+							<Label text="{i18n>value}" id="__label1test"/>
+						</header>
+					</Column>
+					<Column id="__column2test">
+						<header>
+							<Label text="{i18n>rating}" id="__label2test"/>
+						</header>
+					</Column>
+				</columns>
+			</Table>
+		</content>
+		<!--<beginButton>-->
+		<!--	<Button text="OK" icon="sap-icon://accept" press="onDialogOk"/>-->
+		<!--</beginButton>-->
+		<endButton>
+			<Button id="btn_cancle_result" text="{i18n>cancel}" icon="sap-icon://sys-cancel" press="onDialogCancle">
+				<customData>
+			        <core:CustomData id="result_dialog" key="name" value="resultDialog"/>
+			    </customData>
+			</Button>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

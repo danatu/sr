@@ -1,0 +1,30 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core"
+	xmlns:form="sap.ui.layout.form">
+	<Bar id="__bar2">
+		<contentLeft>
+			<Panel class="footerPnl" visible="{= ${ObjectView>/bars/form/visible} &amp;&amp; ${ObjectView>/isUserEdit}}" id="footerFormPnl">
+				<Button enabled="{ObjectView>/enableEdit}" text="{i18n>edit}" width="100px" id="btnEdit" icon="sap-icon://edit" press="onEdit"/>
+				<Button enabled="{ObjectView>/enableUpdate}" text="{i18n>save}" width="100px" id="btnSave" icon="sap-icon://save" press="onSaveCustData"/>
+				<Button enabled="{= ${ObjectView>/enableEdit} ? false : true}" text="{i18n>lock}" width="100px" id="btnLock" icon="sap-icon://locked" press="onEdit"/>
+			</Panel>
+			<Panel class="footerPnl" visible="{ObjectView>/bars/qqcalc/visible}" id="footerqqcalcPnlRight">
+				<Button text="{i18n>edit}" id="btn_action_edit_q" icon="sap-icon://edit" press="onEditQqcalc" class="sapUiSmallMarginBottom"/>
+				<Button text="{i18n>save}" id="btn_action_save" icon="sap-icon://action" press="onSaveQqcalc" class="sapUiSmallMarginBottom"/>
+			</Panel>
+		</contentLeft>
+		<contentRight>
+			<!--<Button visible="false" enabled="{ObjectView>/enableCreate}" text="{i18n>create_record}" width="150px" id="btn_create_record" icon="sap-icon://create-form" press="onCreateRecord"/>-->
+			<!--<Button text="{i18n>create_report}" width="100px" id="btn_create" icon="sap-icon://create" press="onCreateRating"/>-->
+			<Panel class="footerPnl" visible="{ObjectView>/bars/form/visible}" id="footerFormPnl2">
+				<Button text="{i18n>create_report}" id="btn_action_report" icon="sap-icon://action" press="onHandleOpen" class="sapUiSmallMarginBottom"/>
+			</Panel>
+			<Panel class="footerPnl" visible="{ObjectView>/bars/result/visible}" id="footerResultPnl">
+				<Button text="{i18n>upload}" id="btn_action_upload" icon="sap-icon://upload" press="onHandleOpen" class="sapUiSmallMarginBottom"/>
+				<Button text="{i18n>export}" id="btn_action_export" icon="sap-icon://action" press="onHandleOpen" class="sapUiSmallMarginBottom"/>
+			</Panel>
+			<Panel class="footerPnl" visible="{ObjectView>/bars/qqcalc/visible}" id="footerqqcalcPnl">
+				<Button text="{i18n>create_report}" id="btn_action_report_q" icon="sap-icon://upload" press="onReportQqcalc" class="sapUiSmallMarginBottom"/>
+			</Panel>
+		</contentRight>
+	</Bar>
+</core:FragmentDefinition>

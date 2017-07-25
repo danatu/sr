@@ -1,0 +1,40 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+        <Schema
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="SR.SR_USER">
+            <EntityType Name="UsersType">
+                <Key>
+                    <PropertyRef Name="userid"/>
+                </Key>
+                <Property Name="userid" Type="Edm.Byte" Nullable="false"/>
+                <Property Name="uname" Type="Edm.String" MaxLength="37"/>
+                <Property Name="uname2" Type="Edm.String" MaxLength="5"/>
+                <Property Name="grpname" Type="Edm.String" MaxLength="5"/>
+                <Property Name="dirname" Type="Edm.String" MaxLength="9"/>
+                <Property Name="utelnum" Type="Edm.String" MaxLength="13"/>
+                <Property Name="orig_date" Type="Edm.String" MaxLength="16"/>
+                <Property Name="last_date" Type="Edm.String" MaxLength="18"/>
+                <Property Name="status" Type="Edm.String" MaxLength="6"/>
+                <Property Name="gstatus" Type="Edm.Int16"/>
+                <Property Name="adminStatus" Type="Edm.Int16"/>
+                <Property Name="ftpStatus" Type="Edm.Int16"/>
+                <Property Name="certprostatus" Type="Edm.Int16"/>
+                <Property Name="qqStatus" Type="Edm.Int16"/>
+                <Property Name="upswd" Type="Edm.String" MaxLength="60"/>
+                <Property Name="secquest" Type="Edm.String" MaxLength="60"/>
+                <Property Name="secblock" Type="Edm.Int16"/>
+                <Property Name="apswdblock" Type="Edm.Int16"/>
+                <Property Name="srpswdblock" Type="Edm.Int16"/>
+                <Property Name="certproid" Type="Edm.Int16"/>
+                <Property Name="ucount" Type="Edm.Int16"/>
+            </EntityType>
+            <EntityContainer Name="SR_USER" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="Users" EntityType="SR.SR_USER.UsersType"/>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

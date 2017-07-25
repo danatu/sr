@@ -1,0 +1,151 @@
+<mvc:View xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" controllerName="sr.controller.Object">
+	<SplitContainer id="SplitContDemo" initialDetail="detail_id" initialMaster="master">
+		<detailPages>
+			<Page id="detail_id" class="sapUiStdPage upperHdr">
+				<content>
+					<ObjectHeader title="{i18n>what_do_you}" introActive="true" titleActive="false" id="__header0" titleLevel="H2"/>
+					<Panel headerText="Reports">
+						<content>
+							<GenericTile id="report_comp" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Compare Report" press="onPressReport">
+								<tileContent>
+									<TileContent>
+										<content>
+											<ImageContent src="sap-icon://compare"/>   
+										</content>
+									</TileContent>
+								</tileContent>
+							</GenericTile>
+							<GenericTile id="report_comp1" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Peer Report" press="onPressReport">
+								<tileContent>
+									<TileContent>
+										<content>
+											<ImageContent src="sap-icon://manager"></ImageContent>
+										</content>
+									</TileContent>
+								</tileContent>
+							</GenericTile>  
+								<GenericTile id="report_comp2" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Trend Report" press="onPressReport">
+								<tileContent>
+									<TileContent>
+										<content>
+											<ImageContent src="sap-icon://line-chart"></ImageContent>
+										</content>
+									</TileContent>
+								</tileContent>
+							</GenericTile>
+						</content>
+					</Panel>
+					<Panel headerText="My Certified Reports"></Panel>
+				</content>
+			</Page>
+			<Page id="detail_form" title="{i18n>banking_report}" class="sapUiStdPage upperHdr" showNavButton="{device>/system/desktop}"
+				navButtonPress="backToHome">
+				<content>
+					<ObjectHeader visible="{ObjectView>/isHeaderVisible}" id="finDataHeader"
+						title="{parts:[{path:'appView>/selectedfinForm/coname'},{path:'ObjectView>/isUserEdit'}], formatter:'.formatter.titleFormatter'}"
+						icon="sap-icon://customer" class="txtNormal" iconActive="true">
+						<!--<ObjectHeader visible="{ObjectView>/isHeaderVisible}" id="finDataHeader" title="{appView>/selectedfinForm/coname}"-->
+						<!--	icon="sap-icon://customer" class="txtNormal" iconActive="true">-->
+						<attributes>
+							<ObjectAttribute text="{appView>/selectedfinForm/stmtdate}" id="stmtdate_att_id" title="{i18n>statement_date}"/>
+							<ObjectAttribute text="{parts:[{path:'appView>/selectedfinForm/assurance'}], formatter:'.formatter.assuranceFormatter'}"
+								id="assurance_att_id" title="{i18n>data_assurance}"/>
+							<ObjectAttribute text="{appView>/selectedfinForm/description}" id="description_att_id" title="{i18n>description}"/>
+							<ObjectAttribute text="{appView>/selectedfinForm/sicode}" id="cosic_att_id" title="{i18n>sic_code}"/>
+						</attributes>
+					</ObjectHeader>
+					<IconTabBar expanded="true" select="onTabSelection" id="iconTabBar_id" expandable="false">
+						<items>
+							<IconTabFilter key="form" text="{i18n>tab_filter_form}" icon="sap-icon://form" id="tab_filter_form">
+								<content>
+									<mvc:XMLView id="formView_id" viewName="sr.view.Form"/>
+									<!--<core:Fragment fragmentName="sr.view.form" type="XML"/>-->
+								</content>
+							</IconTabFilter>
+							<IconTabFilter enabled="{appView>/isResultRating}" key="indRating" text="{i18n>tab_filter_Indicative_Rating}" icon="sap-icon://performance"
+								id="tab_filter_indRating">
+								<content>
+									<core:Fragment fragmentName="sr.view.result" type="XML"/>
+								</content>
+							</IconTabFilter>
+							<IconTabFilter enabled="{appView>/isResultRating}" key="qqcalc" text="{i18n>tab_filter_QQCalc}" icon="sap-icon://measurement-document"
+								id="tab_filter_QQCALC">
+								<content>
+									<mvc:XMLView id="qqcalc_id" viewName="sr.view.qqcalc"/>
+								</content>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</content>
+				<footer>
+					<core:Fragment fragmentName="sr.view.Footer" type="XML"/>
+				</footer>
+				<customHeader>
+					<Bar id="__bar0">
+						<contentLeft>
+							<Button class="btnMenu" icon="sap-icon://nav-back" press="onPressBack" text="Main" width="100px" id="__buttontest4"/>
+						</contentLeft>
+						<contentRight>
+							<Button class="btnMenu" icon="sap-icon://close-command-field" press="onPressHide" text="{i18n>hide_panel}" width="100px" id="__buttontest2"/>
+							<Button class="btnMenu" icon="sap-icon://collapse-group" press="onHideDetails" text="{i18n>hide_details}" width="130px" id="__buttontest3"/>
+						</contentRight>
+					</Bar>
+				</customHeader>
+			</Page>
+		</detailPages>
+		<masterPages>
+			<Page id="master" title="" icon="sap-icon://action" class="upperHdr sapUiStdPage">
+				<content>
+					<SearchField suggest="onSuggestFin" enableSuggestions="true" class="redBtn" id="searchField_company" showRefreshButton="true"
+						tooltip="{i18n>masterSearchTooltip}" width="100%" search="onSearch" placeholder="{i18n>business_search}" maxLength="15"
+						liveChange="filterList"/>
+					<IconTabHeader id="formFilterTab" select="onGroupFilter">
+						<items>
+							<IconTabFilter text="{i18n>private}" icon="sap-icon://private" id="__filter7" key="private"/>
+							<IconTabFilter text="{i18n>group}" id="__filter6" icon="sap-icon://group" key="group"/>
+							<!--<IconTabFilter text="Shared" icon="sap-icon://home-share" id="__filter8"/>-->
+						</items>
+					</IconTabHeader>
+					<List noDataText="{i18n>no_fin_data_text}" id="list"/>
+				</content>
+				<footer>
+					<Toolbar width="100%" id="__toolbar1">
+						<content>
+							<Button text="{i18n>add}" id="btn_action_add" icon="sap-icon://action" press="onHandleOpen" class="sapUiSmallMarginBottom"/>
+							<ToolbarSpacer xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" id="__spacer1"/>
+							<Button width="50px" id="btn_filter" icon="sap-icon://filter" press="onFilterInteraction"/>
+							<ActionSelect selectedItemId="__item26" id="__select1" maxWidth="15%" icon="sap-icon://sort" forceSelection="false" type="IconOnly">
+								<items>
+									<core:ListItem text="Company" key="item1" id="__item26"/>
+								</items>
+							</ActionSelect>
+						</content>
+					</Toolbar>
+				</footer>
+				<subHeader>
+					<Toolbar class="subHdr" width="100%" id="__toolbar2">
+						<content>
+							<ObjectHeader title="{i18n>welcome} {appView&gt;/user/FIRSTNAME} {appView>/user/LASTNAME}" id="HeaderUser_id" responsive="true"
+								titleLevel="H4"/>
+						</content>
+					</Toolbar>
+				</subHeader>
+				<headerContent>
+					<Toolbar width="100%" id="__toolbar3">
+						<content>
+							<Button visible="{ObjectView>/roles/admin}" class="btnMenu" width="50px" id="__button_admin" icon="sap-icon://key-user-settings"
+								press="onAdmin"/>
+							<!--<core:Icon xmlns:sap.ui.core="sap.ui.core" class="menuIcon" src="sap-icon://globe" size="1.5em" id="__icon_lang" tooltip="{i18n>language}" press="handlePopoverLangPress"/>-->
+							<Button class="btnMenu" width="50px" id="__button2" icon="sap-icon://globe" press="handlePopoverLangPress" tooltip="{i18n>language}"/>
+							<l:HorizontalLayout>
+								<l:content>
+									<Button tooltip="Menu" class="btnMenu" id="openMenu" icon="sap-icon://menu" press="handlePressOpenMenu"/>
+								</l:content>
+							</l:HorizontalLayout>
+						</content>
+					</Toolbar>
+				</headerContent>
+			</Page>
+		</masterPages>
+	</SplitContainer>
+</mvc:View>

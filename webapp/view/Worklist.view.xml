@@ -1,0 +1,133 @@
+<core:View xmlns:tnt="sap.tnt" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:ux="sap.uxap" controllerName="sr.controller.Worklist">
+	<App id="pages_id">
+		<pages>
+			<Page>
+				<headerContent>
+							<OverflowToolbar xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" class="pnlHeader" id="__toolbar1">
+								<content>
+									<Image class="imgMenu" width="50px" height="30px" id="__image1" src="css\pics\srLogo.png"/>
+									<ToolbarSpacer id="__spacer1"/>
+										<Button class="btnMenu" text="{i18n>home}" width="100px" id="btn_home" press="navigateMenu"/>
+										<Button class="btnMenu" text="{i18n>about_us}" width="100px" id="btn_about" icon="sap-icon://navigation-down-arrow" iconFirst="false" press="handleAboutusPress"/>
+										<Button class="btnMenu" text="{i18n>pricing}" width="100px" id="btn_pricing" press="navigateMenu"/>
+										<Button class="btnMenu" text="{i18n>products}" width="100px" id="btn_products" press="navigateMenu"/>
+										<Button class="btnMenu" text="{i18n>partners}" width="100px" id="btn_partners" press="navigateMenu"/>
+										<Button class="btnMenu" text="{i18n>certification}" icon="sap-icon://navigation-down-arrow" iconFirst="false" press="handleCertificationPress" width="120px" id="btn_certification"/>
+										<Button class="btnMenu" text="{i18n>community}" width="100px" id="btn_community" press="navigateMenu"/>
+										<Button class="btnMenu" text="{i18n>contact_us}" width="100px" id="btn_contact_us" press="navigateMenu"/>
+									<ToolbarSpacer id="__spacer0"/>
+									<core:Icon xmlns:sap.ui.core="sap.ui.core" class="menuIcon" src="sap-icon://globe" size="1.5em" id="__icon_lang" tooltip="{i18n>language}" press="handlePopoverLangPress"/>
+									<core:Icon xmlns:sap.ui.core="sap.ui.core" class="menuIcon" src="sap-icon://person-placeholder" size="1.5em" id="__icon1" tooltip="{i18n>login}" press="handlePopoverPress"/>
+								</content>
+							</OverflowToolbar>
+				</headerContent>
+				<footer>
+					<Toolbar width="100%" id="__toolbar2">
+						<content>
+							<Text text="© Self-Rating, LLC. All rights reserved&#9;" id="__text6" textAlign="End"/>
+						</content>
+					</Toolbar>
+				</footer>
+				<content>
+					<Panel id="__panel1" height="100%">
+						<content>
+							
+							
+	<ux:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="true" showAnchorBar="false">
+		<ux:headerContent>
+				<Image src="css\pics\build.jpg" width="100%" height="40%" id="__image0">
+				</Image>
+				<Text class="txtHeader txtHeader2" text="An affordable, easy-to-use software tool enabling small and mid-size businesses to know their credit status." id="__text11" textAlign="Center"/>
+				<Text class="txtHeader txtHeader1" text="Self - Rating" id="__text12"/>
+		</ux:headerContent>
+ 
+		<ux:sections>
+		
+			<ux:ObjectPageSection id="section_about" title="{i18n>about_us}">
+				<ux:subSections>
+					<ux:ObjectPageSubSection id="section_our_vision" title="Our Vision">
+						<ux:blocks>
+							<Text text="Our Vision" id="__text111"/>
+						</ux:blocks>
+					</ux:ObjectPageSubSection>
+					<ux:ObjectPageSubSection id="section_our_team" title="Our Team">
+						<ux:blocks>
+							<Text text="Our Team" id="__text112"/>
+						</ux:blocks>
+					</ux:ObjectPageSubSection>
+				</ux:subSections>
+			</ux:ObjectPageSection>
+
+			<ux:ObjectPageSection id="section_pricing" title="{i18n>pricing}">
+				<ux:subSections>
+					<ux:ObjectPageSubSection title="{i18n>pricing}">
+						<ux:blocks>
+							<Text text="{i18n>pricing}" id="__text113"/>
+						</ux:blocks>
+					</ux:ObjectPageSubSection>
+				</ux:subSections>
+			</ux:ObjectPageSection>
+ 
+			<ux:ObjectPageSection id="section_products" title="{i18n>products}">
+				<ux:subSections>
+					<ux:ObjectPageSubSection title=" ">
+						<ux:blocks>
+								<Text text="{i18n>products}" id="__text114"/>
+						</ux:blocks>
+					</ux:ObjectPageSubSection>
+				</ux:subSections>
+			</ux:ObjectPageSection>
+				<ux:ObjectPageSection id="section_partners" title= "{i18n>partners}">
+				<ux:subSections>
+					<ux:ObjectPageSubSection title=" ">
+						<ux:blocks>
+							<Text text="{i18n>partners}" id="__text115"/>
+						</ux:blocks>
+					</ux:ObjectPageSubSection>
+				</ux:subSections>
+			</ux:ObjectPageSection>
+
+			<ux:ObjectPageSection id="section_certification" title="{i18n>certification}">
+				<ux:subSections>
+					<ux:ObjectPageSubSection id="section_subscribe" title="Subscribe">
+						<ux:blocks>
+							<Text text="Subscribe" id="text_Subscribe"/>
+						</ux:blocks>
+					</ux:ObjectPageSubSection>
+					<ux:ObjectPageSubSection id="section_external" title="External Reviewer">
+						<ux:blocks>
+							<Text text="Our Team" id="text_external"/>
+						</ux:blocks>
+					</ux:ObjectPageSubSection>
+				</ux:subSections>
+			</ux:ObjectPageSection>
+				<ux:ObjectPageSection id="section_community" title= "{i18n>community}">
+				<ux:subSections>
+					<ux:ObjectPageSubSection title=" ">
+						<ux:blocks>
+								<Text text="{i18n>certification}" id="__text117"/>
+						</ux:blocks>
+					</ux:ObjectPageSubSection>
+				</ux:subSections>
+			</ux:ObjectPageSection>
+				<ux:ObjectPageSection id="section_contact_us" title= "{i18n>contact_us}">
+				<ux:subSections>
+					<ux:ObjectPageSubSection title=" ">
+						<ux:blocks>
+								<Text text="{i18n>contact_us}" id="__text118"/>
+						</ux:blocks>
+					</ux:ObjectPageSubSection>
+				</ux:subSections>
+			</ux:ObjectPageSection>
+
+		</ux:sections>
+ 
+	</ux:ObjectPageLayout>
+
+						</content>
+					</Panel>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</core:View>

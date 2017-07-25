@@ -1,0 +1,92 @@
+{
+  "routes": [
+    {
+      "path": "/webapp/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/webapp/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/sap/opu/odata",
+      "target": {
+        "type": "destination",
+        "name": "GWD",
+        "entryPath": "/sap/opu/odata"
+      },
+      "description": "GWD"
+    },
+    {
+      "path": "/HANADB",
+      "target": {
+        "type": "destination",
+        "name": "HANADB"
+      },
+      "description": "HANADB"
+    },
+      {
+      "path": "/MorningStar",
+      "target": {
+        "type": "destination",
+        "name": "MorningStar",
+        "entryPath": "/"
+      },
+      "description": "MorningStar"
+    },
+      {
+      "path": "/JSPDF",
+      "target": {
+        "type": "destination",
+        "name": "JSPDF",
+        "entryPath": "/"
+      },
+      "description": "JSPDF"
+    }
+  ],
+  "cacheControl": [
+    {
+      "directive": "private",
+      "maxAge": 0,
+      "path": "**.html"
+    },
+    {
+      "directive": "private",
+      "maxAge": 0,
+      "path": "sap-ui-cachebuster-info.json"
+    },
+    {
+      "directive": "public",
+      "maxAge": 31536000
+    }
+  ],
+    "authenticationMethod": "none" 
+}

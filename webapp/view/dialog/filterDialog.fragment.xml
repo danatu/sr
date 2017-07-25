@@ -1,0 +1,32 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<Dialog id="filterDialog" title="Filter">
+		<content>
+			<VBox class="boxMaster" direction="Column" width="100%" id="__box1">
+				<items>
+					<!--<Button id="btn_backHome_id" text="Home" press="onPressHome" width="100%"/>-->
+					<Label text="Industries" width="100%" id="__label040"/>
+					<ComboBox selectedKey="item1" id="Category_combo" width="100%" selectionChange="onPressCategory">
+						<items>
+							<core:ListItem xmlns:core="sap.ui.core" text="Banking" key="0"/>
+							<core:ListItem xmlns:core="sap.ui.core" text="Non Banking" key="1"/>
+						</items>
+					</ComboBox>
+					<Label text="Business" width="100%" id="__label41"/>
+					<ComboBox selectedKey="item1" id="companies_combo" width="100%" selectionChange="onPressCompany">
+						<items/>
+					</ComboBox>
+					<Label text="Statement Date" width="100%" id="label_date"/>
+					<ComboBox selectedKey="item1" id="date_combo" width="100%">
+						<items/>
+					</ComboBox>
+				</items>
+			</VBox>
+		</content>
+	    <beginButton>
+            <Button text="OK" icon="sap-icon://accept" press="onDialogOk" />
+        </beginButton>
+        <endButton>
+            <Button text="{i18n>cancel}"  icon="sap-icon://sys-cancel" press="onDialogCancle" />
+        </endButton>   
+        </Dialog>
+</core:FragmentDefinition>

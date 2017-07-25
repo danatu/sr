@@ -1,0 +1,101 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" controllerName="sr.controller.qqcalc">
+	<!--<App>-->
+	<!--	<pages>-->
+		<!--<Page enableScrolling="false">-->
+		<!--	<content>-->
+	<!--<VBox class="sapUiSmallMargin">-->
+		<ObjectHeader class="qqTitle" id="qqtotal_id" title="QQCalc Total: 12 of 75"/>
+		<Button id="btn_result" press="onPresentResultDialog" icon="sap-icon://goal" text="Present Results" tooltip="present results" />
+	<Panel id="table_score_id" headerText="Score" expandable="true" expanded="true">
+	</Panel>
+	
+		<NavContainer id="navCon" class="navContainerControl sapUiSmallMarginBottom" height="700px">
+			<!--<Page id="p_q1" title="Page 1">-->
+			<!--	<footer>-->
+			<!--			<Bar>-->
+			<!--				<contentRight>-->
+			<!--			<Button text="Next" press="handleNav">-->
+			<!--				<customData>-->
+			<!--					<core:CustomData key="target" value="p_q2"/>-->
+			<!--				</customData>-->
+			<!--			</Button>-->
+			<!--				</contentRight>-->
+			<!--		</Bar>-->
+			<!--	</footer>-->
+			<!--<content>-->
+			<!--</content>-->
+			<!--</Page>-->
+			<!--<Page id="p_q2" title="Page 2">-->
+			<!--	<footer>-->
+			<!--		<Bar>-->
+			<!--			<contentRight>-->
+			<!--				<Button text="Prev" press="handleNav">-->
+			<!--					<customData>-->
+			<!--						<core:CustomData key="target" value="p_q1"/>-->
+			<!--					</customData>-->
+			<!--				</Button>-->
+			<!--				<Button text="Next" press="handleNav">-->
+			<!--					<customData>-->
+			<!--						<core:CustomData key="target" value="p_q3"/>-->
+			<!--					</customData>-->
+			<!--				</Button>-->
+			<!--			</contentRight>-->
+			<!--		</Bar>-->
+			<!--	</footer>-->
+			<!--</Page>-->
+			<!--<Page id="p_q3" title="Page 3">-->
+			<!--	<footer>-->
+			<!--		<Bar>-->
+			<!--			<contentRight>-->
+			<!--				<Button text="Prev" press="handleNav">-->
+			<!--					<customData>-->
+			<!--						<core:CustomData key="target" value="p2"/>-->
+			<!--					</customData>-->
+			<!--				</Button>-->
+			<!--				<Button text="Next" press="handleNav">-->
+			<!--					<customData>-->
+			<!--						<core:CustomData key="target" value="p4"/>-->
+			<!--					</customData>-->
+			<!--				</Button>-->
+			<!--			</contentRight>-->
+			<!--		</Bar>-->
+			<!--	</footer>-->
+			<!--</Page>-->
+			<!--<Page id="p_q4" title="Page 4">-->
+			<!--	<footer>-->
+			<!--		<Bar>-->
+			<!--			<contentRight>-->
+			<!--				<Button text="Prev" press="handleNav">-->
+			<!--					<customData>-->
+			<!--						<core:CustomData key="target" value="p3"/>-->
+			<!--					</customData>-->
+			<!--				</Button>-->
+			<!--				<Button text="Next" press="handleNav">-->
+			<!--					<customData>-->
+			<!--						<core:CustomData key="target" value="p5"/>-->
+			<!--					</customData>-->
+			<!--				</Button>-->
+			<!--			</contentRight>-->
+			<!--		</Bar>-->
+			<!--	</footer>-->
+			<!--</Page>-->
+			<!--<Page id="p_q5" title="Page 5">-->
+			<!--	<footer>-->
+			<!--		<Bar>-->
+			<!--			<contentRight>-->
+			<!--				<Button text="Prev" press="handleNav">-->
+			<!--					<customData>-->
+			<!--						<core:CustomData key="target" value="p4"/>-->
+			<!--					</customData>-->
+			<!--				</Button>-->
+			<!--			</contentRight>-->
+			<!--		</Bar>-->
+			<!--	</footer>-->
+			<!--</Page>-->
+		</NavContainer>
+	<!--</VBox>-->
+			<!--	</content>-->
+			<!--</Page>-->
+	<!--	</pages>-->
+	<!--</App>-->
+</mvc:View>

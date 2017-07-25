@@ -1,0 +1,18 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form">
+<Panel id="whole_page">
+<content>
+	<!--<Panel class="pnlbcg" id="ss" width="595pt" height="842pt">	-->
+	<!--<content>	-->
+	    <ObjectHeader class="pnlbcg" title="Self Rating Indicative Report" introActive="true" titleActive="true" id="__header1"/>	
+	<!--    <Text class="pnlbcg" text="No text specified" id="__text22"/>	-->
+	<!--</content>	-->
+	<!--</Panel>-->
+	<Panel class="pnlbcg" id="ss_copy" width="595pt" height="842pt">
+	    <content>
+	        <ObjectHeader class="pnlbcg" title="Improve your bussiness" introActive="true" titleActive="true" id="__header1_copy"/>
+	        <Text class="pnlbcg" text="No text specified" id="__text22_copy"/>
+	  </content>
+	</Panel>
+</content>	
+</Panel>
+</core:FragmentDefinition>

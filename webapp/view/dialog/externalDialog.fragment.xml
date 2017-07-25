@@ -1,0 +1,42 @@
+<core:FragmentDefinition xmlns:u="sap.ui.unified" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<Dialog id="externalDialog" title="Upload External Source">
+		<content>
+				<Page class="noHdr" id="external_p1" title="">
+					<content>
+						<VBox class="boxMaster" direction="Column" width="100%" id="__boxexternal">
+							<items>
+							<SearchField suggest="onSuggestCompany" enableSuggestions="true" search="onSelectCompany" liveChange="onCompanySearch" width="100%" placeholder="Choose Company" id="sf_id"/>
+							</items>
+						</VBox>
+						<Panel class="loginpage">
+							<content>
+									<Label text="Form Permissions:" />
+										<ComboBox width="50%" selectedKey="item_form0"  id="ext_permit_id" >
+											<items>
+												<core:ListItem text="Private" key="item_form0"/>
+												<core:ListItem text="Group" key="item_form1"/>
+											</items>
+									</ComboBox>  
+									<Label text="Industry:" />
+									<ComboBox width="50%" selectedKey="item_inds1" id="ext_industry_id"	>
+											<items>
+												<core:ListItem text="Banking" key="item_inds0"/>
+												<core:ListItem text="Non Banking" key="item_inds1"/>
+												</items>
+									</ComboBox>
+							</content>
+						</Panel>
+					</content>
+				</Page>
+		</content>
+		<!--<beginButton>-->
+		<!--	<Button text="OK" icon="sap-icon://accept" press="onDialogOk"/>-->
+		<!--</beginButton>-->
+		<beginButton>
+				<Button enabled="false" id="btn_external" text="Upload" press="onUploadExternalForm"></Button>
+		</beginButton>
+		<endButton>
+			<Button id="btn_cancle_external" text="{i18n>cancel}" icon="sap-icon://sys-cancel" press="onDialogExternalCancle"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

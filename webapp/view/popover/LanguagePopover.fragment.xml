@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Popover id="langPopover" title="{Name}" class="sapUiContentPadding" placement="Bottom">
+	<content>
+	    <SelectList selectionChange ="onSelectLanguage" selectedKey="lang_en" id="list_language">
+	        <items>
+	            <core:ListItem text="English" key="lang_en" />
+	            <core:ListItem text="Hebrew" key="lang_iw"/>
+	        </items>
+	    </SelectList>
+	</content>
+	<subHeader>
+	    <Text class="popLoginTxt" text="Select Language" id="text_user"/>
+	</subHeader>
+	</Popover>
+</core:FragmentDefinition>

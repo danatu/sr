@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form">
+	<ActionSheet
+		title="Export"
+		showCancelButton="true"
+		placement="Top">
+		<buttons>
+			<Button text="Box Plot Peer Report" icon="sap-icon://pdf-attachment"/>
+			<Button text="Graphical Peer Report" icon="sap-icon://document-text" />
+			<!--<Button  press="handlePdf" text="Indicative Rating Report" icon="sap-icon://excel-attachment" />-->
+		</buttons>
+	</ActionSheet>
+	
+</core:FragmentDefinition>

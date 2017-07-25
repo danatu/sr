@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form">
+	<ActionSheet
+		title="Export"
+		showCancelButton="true"
+		placement="Top">
+		<buttons>
+			<Button press="onCreateFin" text="{i18n>create_record}" icon="sap-icon://pdf-attachment"/>
+			<Button press="onImportExternal" text="{i18n>load_external}" icon="sap-icon://document-text" />
+			<Button press="onImportCsv" text="{i18n>load_csv}" icon="sap-icon://excel-attachment" />
+		</buttons>
+	</ActionSheet>
+</core:FragmentDefinition>
+

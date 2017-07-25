@@ -1,0 +1,103 @@
+<mvc:View xmlns:micro="sap.suite.ui.microchart" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:m="sap.m" xmlns:l="sap.ui.layout" controllerName="sr.controller.Compare">
+	<App>
+		<pages>
+			<Page title="Compare Rerport">
+				<customHeader>
+					<Bar id="__bar0">
+						<contentLeft>
+							<Button class="btnMenu" icon="sap-icon://nav-back" press="onPressBack" text="Main" width="100px" id="__buttontest4"/>
+						</contentLeft>
+						<contentMiddle>
+							<Text text="Compare Rerport"/>
+						</contentMiddle>
+					</Bar>
+				</customHeader>
+				<headerContent>
+					<Text text="Compare Rerport"/>
+				</headerContent>
+				<content>
+					<!--<Table id="table_scale" showNoData="false" >-->
+					<!--	<columns>-->
+					<!--		<Column minScreenWidth="Small" demandPopin="true" styleClass="colStyle_AAA" width="1rem" hAlign="Center">-->
+					<!--			<header>-->
+					<!--				<Label class="testb" text="AAA" id="__label300" textAlign="Center" design="Bold"/>-->
+					<!--			</header>-->
+					<!--		</Column>-->
+					<!--		<Column minScreenWidth="Small" demandPopin="true" styleClass="colStyle_AA" width="1rem" hAlign="Center">-->
+					<!--			<header>-->
+					<!--				<Label text="AA" textAlign="Center" design="Bold"/>-->
+					<!--			</header>-->
+					<!--		</Column>-->
+					<!--		<Column minScreenWidth="Small" demandPopin="true" styleClass="colStyle_A" width="1rem" hAlign="Center">-->
+					<!--			<header>-->
+					<!--				<Label text="A" textAlign="Center" design="Bold"/>-->
+					<!--			</header>-->
+					<!--		</Column>-->
+					<!--		<Column minScreenWidth="Small" demandPopin="true" styleClass="colStyle_BBB" width="1rem" hAlign="Center">-->
+					<!--			<header>-->
+					<!--				<Label text="BBB" textAlign="Center" design="Bold"/>-->
+					<!--			</header>-->
+					<!--		</Column>-->
+					<!--		<Column minScreenWidth="Small" demandPopin="true" styleClass="colStyle_BB" width="1rem" hAlign="Center">-->
+					<!--			<header>-->
+					<!--				<Label text="BB" textAlign="Center" design="Bold"/>-->
+					<!--			</header>-->
+					<!--		</Column>-->
+					<!--		<Column minScreenWidth="Small" demandPopin="true" styleClass="colStyle_B" width="1rem" hAlign="Center">-->
+					<!--			<header>-->
+					<!--				<Label text="B" textAlign="Center" design="Bold"/>-->
+					<!--			</header>-->
+					<!--		</Column>-->
+					<!--		<Column minScreenWidth="Small" demandPopin="true" styleClass="colStyle_Below" width="1rem" hAlign="Center">-->
+					<!--			<header>-->
+					<!--				<Label text="Below B" textAlign="Center" design="Bold"/>-->
+					<!--			</header>-->
+					<!--		</Column>-->
+					<!--	</columns>-->
+					<!--</Table>-->
+					
+					<!--<l:Grid id="scale">-->
+					<!--	<l:content>-->
+					<!--			<Text class="colStyle_AAA" text="AAA"/>-->
+					<!--			<Text text="AA" class="colStyle_AA"/>-->
+						
+					<!--			<Text text="A" class="colStyle_A"/>-->
+						
+					<!--			<Text text="BBB" class="colStyle_BBB"/>-->
+						
+					<!--			<Text text="BB" class="colStyle_BB"/>-->
+						
+					<!--			<Text text="B" class="colStyle_B"/>-->
+						
+					<!--			<Text text="Below B" class="colStyle_Below"/>-->
+					<!--	</l:content>-->
+					<!--</l:Grid>-->
+					<Panel id="compPanel">
+						<!--<Table id="tableID">-->
+						<!--	<columns>-->
+						<!--		<Column demandPopin="true" minScreenWidth="Tablet"  width="30%" hAlign="Center">-->
+						<!--			<Text text="Financial Ratios"/>-->
+						<!--		</Column>-->
+						<!--		<Column demandPopin="true" minScreenWidth="Tablet"  hAlign="Center" >-->
+						<!--			<Text text="Value" textAlign="Center"/>-->
+						<!--		</Column>-->
+						<!--		<Column demandPopin="true" minScreenWidth="Tablet" hAlign="Center">-->
+						<!--			<Text text="Rating" textAlign="Center"/>-->
+						<!--		</Column>-->
+						<!--	</columns>-->
+						<!--	<items>-->
+						<!--	</items>-->
+						<!--</Table>-->
+					</Panel>
+				</content>
+				<footer>
+					<Bar>
+						<contentRight>
+							<Button icon="sap-icon://action" class="btnMenu" press="onHandleOpen" text="Export" width="100px" id="export"/>
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

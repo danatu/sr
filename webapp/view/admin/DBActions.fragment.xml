@@ -1,0 +1,12 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form">
+	<ActionSheet
+		title="Export"
+		showCancelButton="true"
+		placement="Bottom">
+		<buttons>
+			<Button text="Unlock" icon="sap-icon://unlocked"/>
+			<Button text="Transfer" icon="sap-icon://copy" />
+			<Button text="Delete" icon="sap-icon://delete" />
+		</buttons>
+	</ActionSheet>
+</core:FragmentDefinition>

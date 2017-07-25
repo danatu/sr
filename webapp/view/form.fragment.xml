@@ -1,0 +1,78 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form">
+	<Panel class="sapUiResponsiveMargin" id="formPnl">
+		<content>
+			<VBox class="boxMaster" direction="Column" width="100%" id="__box2">
+				<!--<VBox class="boxMaster" width="100%" id="__box2" direction="Column" fitContainer="true" justifyContent="Center" wrap="Wrap">-->
+				<items>
+					<Panel headerText="{i18n>general_details}" expandable="true" expanded="false" class="sapUiResponsiveMargin" id="generalDet_panel">
+						<f:SimpleForm class="editableForm" columnsL="1" columnsM="1" editable="true" emptySpanL="4" emptySpanM="4" id="form_general" labelSpanL="3"
+							labelSpanM="3" layout="ResponsiveGridLayout" maxContainerCols="2" minWidth="1024">
+							<f:content>
+								<Label text="{i18n>record_status}" width="100%" id="__label50"/>
+								<RadioButtonGroup width="100%" columns="2" selectedIndex="-1" id="isgrp_id" enabled="false">
+									<buttons>
+										<RadioButton selected="true" groupName="__group0" text="{i18n>group}" id="__button0"/>
+										<RadioButton groupName="__group0" text="{i18n>private}" id="__button1"/>
+									</buttons>
+								</RadioButtonGroup>
+								<Label text="{i18n>currency}" width="100%" id="cocurrency_label"/>
+								<ComboBox width="50%" selectionChange="_validateModelChanges" selectedKey="item1" selectedItemId="__item0" id="currency_id"
+									enabled="false">
+									<items>
+										<core:ListItem text="List Item 1" key="item1"/>
+										<core:ListItem text="List Item 2" key="item2"/>
+										<core:ListItem text="List Item 3" key="item3"/></items>
+								</ComboBox>
+								<Label class="test" text="{i18n>scale}" width="100%" id="coscale_label"/>
+								<ComboBox width="50%" selectionChange="_validateModelChanges" selectedKey="item1" selectedItemId="__item0" id="coscale_id" enabled="false">
+									<items>
+										<core:ListItem text="Actual" key="0"/>
+										<core:ListItem text="Thousands" key="1"/>
+										<core:ListItem text="Millions" key="2"/>
+									</items>
+								</ComboBox>
+								<Label text="{i18n>company_name}" width="100%" id="coname_label"/>
+								<Input valueLiveUpdate="true" liveChange="_validateModelChanges" enabled="false" id="coname_id" fieldWidth="" width="50%"/>
+								<Label text="{i18n>coid}" width="100%" id="coid_label"/>
+								<Input valueLiveUpdate="true" liveChange="_validateModelChanges" enabled="false" id="coid_id" fieldWidth="" width="50%"/>
+								<Label text="{i18n>type}" width="100%" id="type_label"/>
+								<Input valueLiveUpdate="true" liveChange="_validateModelChanges" enabled="false" id="type_id" fieldWidth="" width="50%"/>
+								<Label text="{i18n>description}" width="100%" id="description_label"/>
+								<Input valueLiveUpdate="true" liveChange="_validateModelChanges" id="description_id" enabled="false" fieldWidth="100%" width="50%"/>
+								<Label text="{i18n>statement_date}" width="100%" id="stmtdate_label"/>
+								<Input valueLiveUpdate="true" liveChange="_validateModelChanges" id="stmtdate_id" enabled="false" width="50%"/>
+								<Label text="{i18n>data_assurance}" width="100%" id="assurance_label"/>
+								<ComboBox width="50%" selectionChange="_validateModelChanges" selectedKey="item1" id="assurance_id" enabled="false">
+									<items>
+										<core:ListItem text="None" key="0"/>
+										<core:ListItem text="Compilation" key="1"/>
+										<core:ListItem text="Reviewed" key="2"/>
+										<core:ListItem text="Audited" key="3"/>
+									</items>
+								</ComboBox>
+								<Label text="{i18n>sic_code}" width="100%" id="sicode_label"/>
+								<Input valueLiveUpdate="true" liveChange="_validateModelChanges" type="Number" enabled="false" id="sicode_id" width="50%"/>
+							</f:content>
+						</f:SimpleForm>
+					</Panel>
+					<Panel headerText="{i18n>finance_details}" expandable="true" expanded="true" class="sapUiResponsiveMargin" id="Fianance_Det_panel">
+						<f:SimpleForm width="100%" class="editableForm" columnsL="2" columnsM="2" editable="true" emptySpanL="4" emptySpanM="4" id="form_nonBanking"
+							 labelSpanL="3" labelSpanM="3" layout="ResponsiveGridLayout" maxContainerCols="2" minWidth="1024">
+							<f:toolbar>
+								<Toolbar width="100%" id="__toolbarwi">
+									<content>
+										<Button text="{i18n>what_if}" width="100px" id="btn_wi" icon="sap-icon://travel-request" press="onWhatIf"/>
+									</content>
+								</Toolbar>
+							</f:toolbar>
+							<f:content>
+					
+							</f:content>
+						</f:SimpleForm>
+					</Panel>
+			
+				</items>
+			</VBox>
+		</content>
+	</Panel>
+</core:FragmentDefinition>

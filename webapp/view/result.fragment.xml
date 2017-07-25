@@ -1,0 +1,92 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form">
+	<VBox class="boxMaster rsltPnl" direction="Column" width="100%" id="__boxResult">
+		<items>
+			<!--<Panel class="resultpnl" headerText="{i18n>indicative_rating_report}" id="panel_result">-->
+			<!--	<content>-->
+
+			<!--<Panel class="sapUiResponsiveMargin">-->
+			<!--	<content>-->
+			<Panel class="pnlTotal">
+				<content>
+					<ObjectAttribute id="total_rating" title="{i18n>overall_rating}" text=""/>
+				</content> 
+			</Panel> 
+			<Table itemPress="onPressResultRow" noDataText="Drop column list items here and columns in the area above" id="table_results" mode="SingleSelectMaster" headerText="{i18n>indicative_rating_chart}">
+				<columns>
+					<Column minScreenWidth="Small" demandPopin="true" id="__column000" width="5rem" hAlign="Begin" vAlign="Middle" popinDisplay="Inline" styleClass="beginAlign">
+						<header>
+							<Label text="{i18n>fianance_ratios}" id="__label0"/>
+						</header>
+					</Column>
+					<Column minScreenWidth="Small" demandPopin="true" id="__column1" width="1rem">
+						<header>
+							<Label text="Value" id="__label100"/>
+						</header>
+					</Column>
+					<Column minScreenWidth="Small" demandPopin="true" id="__column2" width="1rem">
+						<header>
+							<Label text="{i18n>rating}" id="__label200"/>
+						</header>
+					</Column>
+					<Column minScreenWidth="Small" demandPopin="true" class="testa" id="__column3" styleClass="colStyle_AAA" width="1rem">
+						<header class="testc">
+							<Label class="testb" text="{ObjectView>/resultScale/1}" id="__label300"/>
+						</header>
+					</Column>
+					<Column minScreenWidth="Small" demandPopin="true" id="__column4" styleClass="colStyle_AA" width="1rem">
+						<header>
+							<Label text="{ObjectView>/resultScale/3}" id="__label400"/>
+						</header>
+					</Column>
+					<Column minScreenWidth="Small" demandPopin="true" id="__column5" styleClass="colStyle_A" width="1rem">
+						<header>
+							<Label text="{ObjectView>/resultScale/6}" id="__label500"/>
+						</header>
+					</Column>
+					<Column minScreenWidth="Small" demandPopin="true" id="__column6" styleClass="colStyle_BBB" width="1rem">
+						<header>
+							<Label text="{ObjectView>/resultScale/9}" id="__label600"/>
+						</header>
+					</Column>
+					<Column minScreenWidth="Small" demandPopin="true" id="__column7" styleClass="colStyle_BB" width="1rem">
+						<header>
+							<Label text="{ObjectView>/resultScale/12}" id="__label700"/>
+						</header>
+					</Column>
+					<Column minScreenWidth="Small" demandPopin="true" id="__column8" styleClass="colStyle_B" width="1rem">
+						<header>
+							<Label text="{ObjectView>/resultScale/15}" id="__label800"/>
+						</header>
+					</Column>
+					<Column minScreenWidth="Small" demandPopin="true" id="__column9" styleClass="colStyle_Below" width="1rem">
+						<header>
+							<Label text="{ObjectView>/resultScale/16}" id="__label900"/>
+						</header>
+					</Column>
+				</columns>
+			<headerToolbar>
+			    <Toolbar width="100%" id="__toolbar_scale">
+			        <content>
+			            <Label text="{i18n>scale}" width="100%" id="__label_scale"/>
+			            <ComboBox selectionChange="onSelectScale" selectedKey="STANDARD" id="box_scale">
+			                <items>
+			                    <core:ListItem text="A.M. Best" key="AM_BEST" id="_item_a"/>
+			                    <core:ListItem text="Standard" key="STANDARD" id="_item_s"/>
+			                    <core:ListItem text="Moody's" key="MOODY" id="__item_m"/>
+			                </items>
+			            </ComboBox>
+			        </content>
+			    </Toolbar>
+			</headerToolbar>
+			</Table>
+		<Text text="{i18n>no_report}" id="text_noResults" visible="false"/>
+		<Panel id="__panel1" headerText="Settings">
+			<content>
+				  <Label text=" Include Financial Data" width="100%" id="label_switch"/>
+			      <Switch id="switch_isFinancial" state="true" type="AcceptReject"/>
+			</content>
+		</Panel>
+		</items>
+	</VBox>
+
+</core:FragmentDefinition>

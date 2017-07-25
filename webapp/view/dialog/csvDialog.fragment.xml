@@ -1,0 +1,90 @@
+<core:FragmentDefinition xmlns:u="sap.ui.unified" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<Dialog id="csvDialog" title="Upload CSV file">
+		<content>
+			<NavContainer id="navCon" width="100%" class="navContainerControl sapUiSmallMarginBottom">
+				<Page class="noHdr" id="csv_p1" title="">
+					<content>
+						<VBox class="boxMaster" direction="Column" width="100%" id="__boxcsv">
+							<items>
+								<Label text="Choose Industry" width="100%" id="label_csv"/>
+								<ComboBox value="List Item 1" selectedKey="item1" selectedItemId="item_csv_nonbank" id="box_csv">
+									<items>
+										<core:ListItem text="Non Banking" key="item1" id="item_csv_nonbank"/>
+									</items>
+								</ComboBox>
+							</items>
+						</VBox>
+					</content>
+					<footer>
+						<Bar>
+							<contentRight>
+								<Button text="Next" press="handleNav">
+									<layoutData>
+										<FlexItemData growFactor="1"/>
+									</layoutData>
+									<customData>
+										<core:CustomData key="target" value="csv_p2"/>
+									</customData>
+								</Button>
+							</contentRight>
+						</Bar>
+					</footer>
+				</Page>
+				<Page class="noHdr" id="csv_p2" title="Page 2">
+					<footer>
+						<Bar>
+							<contentRight>
+								<Button xmlns:u="sap.ui.unified" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns="sap.m" enabled="{ObjectView>/enableUpload}"
+									text="Upload" press="onUpload" id="__button_upload"/>
+									
+								<Button text="Back" press="handleNav">
+									<layoutData>
+										<FlexItemData growFactor="1"/>
+									</layoutData>
+									<customData>
+										<core:CustomData key="target" value="csv_p1"/>
+									</customData>
+								</Button>
+							</contentRight>
+						</Bar>
+					</footer>
+					<content>
+						<Panel xmlns:u="sap.ui.unified" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" id="__pane_csv">
+							<headerToolbar>
+								<Toolbar width="100%" id="__toolbar_csv">
+									<content>
+										<Button class="btnCSV" xmlns:u="sap.ui.unified" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns="sap.m" icon="sap-icon://download"
+											text="{i18n>download_example}" width="100%" id="btn_example" press="onDownloadCSV"/>
+									</content>
+								</Toolbar>
+							</headerToolbar>
+							<content>
+								<u:FileUploader xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:u="sap.ui.unified" id="idfileUploader"
+									fileAllowed="onFileAllowd" uploadComplete="onUploadComplete" sameFilenameAllowed="false" buttonText="" typeMissmatch="onTypeMissmatch"
+									fileType="CSV" placeholder="Choose a CSV file" style="Emphasized"/>
+							</content>
+						</Panel>
+					</content>
+				</Page>
+				<Page class="noHdr" id="csv_p3" title="Page 3">
+					<content>
+							<Panel headerText="Files Were Loaded Succesfully" xmlns:u="sap.ui.unified" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" id="panel_success">
+							<content>
+								<Button class="btnCSV" xmlns:u="sap.ui.unified" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns="sap.m" icon="sap-icon://download"
+											text="{i18n>report2bar}" width="100%" id="btn_report"/>
+								<Button class="btnCSV" xmlns:u="sap.ui.unified" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns="sap.m" icon="sap-icon://download"
+								text="{i18n>report1bar}" width="100%" id="btn_report1"/>
+							</content>
+						</Panel>
+					</content>
+				</Page>
+			</NavContainer>
+		</content>
+		<!--<beginButton>-->
+		<!--	<Button text="OK" icon="sap-icon://accept" press="onDialogOk"/>-->
+		<!--</beginButton>-->
+		<endButton>
+			<Button id="btn_cancle_csv" text="{i18n>cancel}" icon="sap-icon://sys-cancel" press="onDialogCSVCancle"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,22 @@
+<core:FragmentDefinition xmlns:u="sap.ui.unified" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+    <Dialog id="formsDialog" title="Choose Fin forms to compare">
+        <content>
+	<MultiComboBox id="formsComboBox" selectionChange="handleSelectionChange" width="500px"
+		items="{
+                    path: '/',
+                     sorter: { path: 'coname' }
+                }">
+		<core:Item key="{formid}" text="{coname} {stmtdate}" />
+	</MultiComboBox>
+
+
+
+        </content>
+        <beginButton>
+            <Button text="OK" icon="sap-icon://accept" press="onDialogOk"/>
+        </beginButton>
+        <endButton>
+            <Button id="btn_cancle_csv" text="{i18n>cancel}" icon="sap-icon://sys-cancel" press="onDialogCancle"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>
