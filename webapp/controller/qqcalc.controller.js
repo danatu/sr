@@ -910,10 +910,7 @@ sap.ui.define([
 	    		"Company":oUser.ClientNAME
 			};
 				
-			var indRating = {
-				 "finalScore": oResultData[0].rating,
-	    		 "finalScoreText": formatter.totalRatingFormatter(oResultData[0].rating,oResultData[0].ratingOffsets),   
-			};
+			var indRating = this.getModel("appView").getProperty("/indRating");
 			var qqcalc = {
 			sum:this.qqcalSum,
 			total:this.qqcalTotal,
@@ -936,21 +933,21 @@ sap.ui.define([
 			oData.qqcalcItems = that.qqcalcItems;
 			return oData;
 		},
-	 	onReportQqcalc: function(){
-	 	
-			var oData = this.getPdfData();	
+	 	_sendPdf:function(oData){
 			var sFileName = oData.coname + " QQcalc Report.pdf";
 			var sServiceName =  "/JSPDF"; 
 			//	jsreport.serverUrl = sServiceName;
 			jsreport.serverUrl = "https://sr.jsreportonline.net/";
-			jsreport.headers['Authorization'] = "Basic " +  btoa("dana17@iprosis.com:iprosis");
+			jsreport.headers['Authorization'] = "Basic " +  btoa("dana17@gmail.com:iprosis");
 			var request = {"template":{"name":"qqcalc"},"data":oData,"options": { timeout: 60000 },"Content-Disposition": {"Content-Disposition": "attachment; filename=" + sFileName}};
 		
-		
 			jsreport.download(sFileName, request);
-			
 				//display report in the new tab
 			// jsreport.render('_blank', request);
+	 	},
+	 	onReportQqcalc: function(){
+			var oData = this.getPdfData();	
+			this._sendPdf(oData);
 		}
 
 	});

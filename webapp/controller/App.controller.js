@@ -25,7 +25,11 @@ sap.ui.define([
 					selectedfinForm:null,
 					selectedFormValues:null,
 					isResultRating:false,
-					resultData:null
+					resultData:null,
+					indRating:{
+						"finalScore":"",
+    					"finalScoreText":"" 
+					}
 				});
 				this.setModel(oViewModel, "appView");
 

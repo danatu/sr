@@ -1126,6 +1126,13 @@ sap.ui.define([
 					that.getModel("appView").setProperty("/isResultRating", true);
 					var sOverallRating = formatter.totalRatingFormatter(oResultData["Rate_00"], oResultData["Offs_00"]);
 					this.byId("total_rating").setText(sOverallRating);
+					
+					var obj ={ 
+					"finalScore":sOverallRating,
+					"finalScoreText": oResultData["Rate_00"] 
+				};
+					that.getModel("appView").setProperty("/indRating", obj);
+					
 					// if (this.isFinDataResult(IsRateArr) === true) {
 					var j = 1;
 					for (var i in that.arrTooltips) {
@@ -1217,12 +1224,7 @@ sap.ui.define([
 		var oGeneralData = this.getModel("appView").getProperty("/selectedfinForm");
 		var resultData = this.getResultDataToPDF();
 		var oFinForm = this.getModel("appView").getProperty("/selectedFormValues");
-		var oResultData = this.getModel("appView").getProperty("/resultData");
-		var indRating = {
-			 "finalScore": oResultData[0].rating,
-    		 "finalScoreText": formatter.totalRatingFormatter(oResultData[0].rating,oResultData[0].ratingOffsets)  
-		};
-		
+		var indRating =  this.getModel("appView").getProperty("/indRating");
 		
 		var oData = {};
 		oData.coname = oGeneralData.coname;
@@ -1242,7 +1244,7 @@ sap.ui.define([
 			var sServiceName =  "/JSPDF"; 
 			//	jsreport.serverUrl = sServiceName;
 			jsreport.serverUrl = "https://sr.jsreportonline.net/";
-			jsreport.headers['Authorization'] = "Basic " +  btoa("dana17@iprosis.com:iprosis");
+			jsreport.headers['Authorization'] = "Basic " +  btoa("dana17@gmail.com:iprosis");
 			var request = {"template":{"name":"rating"},"data":oData,"options": { timeout: 60000 },"Content-Disposition": {"Content-Disposition": "attachment; filename=" + sFileName}};
 		
 			//display report in the new tab
